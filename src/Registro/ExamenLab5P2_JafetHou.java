@@ -1,20 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package Registro;
 
-/**
- *
- * @author zenot
- */
+import java.util.Scanner;
+import javax.swing.DefaultComboBoxModel;
+
 public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
 
-    /**
-     * Creates new form ExamenLab5P2_JafetHou
-     */
+    // FILA 2, ASIENTO 14
+    
     public ExamenLab5P2_JafetHou() {
+        
         initComponents();
+        
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -26,21 +24,65 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        Tf_nombre = new javax.swing.JTextField();
+        Tf_contra = new javax.swing.JTextField();
+        jb_entrar = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setBackground(new java.awt.Color(0, 51, 102));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel1.setText("Log In");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 272, 70));
+
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Contraseña: ");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, 120, 30));
+
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Nombre Completo: ");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 120, 30));
+
+        Tf_nombre.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(Tf_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 270, 30));
+
+        Tf_contra.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(Tf_contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 270, 30));
+
+        jb_entrar.setBackground(new java.awt.Color(0, 51, 102));
+        jb_entrar.setText("ENTRAR");
+        jb_entrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_entrarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jb_entrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, 90, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jb_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_entrarActionPerformed
+        
+        
+    }//GEN-LAST:event_jb_entrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +120,12 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Tf_contra;
+    private javax.swing.JTextField Tf_nombre;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jb_entrar;
     // End of variables declaration//GEN-END:variables
 }
