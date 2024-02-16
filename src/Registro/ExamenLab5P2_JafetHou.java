@@ -3,14 +3,21 @@ package Registro;
 
 import java.util.Scanner;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
+import java.util.ArrayList;
+import java.util.Date;
 
 public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
 
     // FILA 2, ASIENTO 14
+    public static ArrayList<Personas> persona = new ArrayList<>();
     
     public ExamenLab5P2_JafetHou() {
-        
+                
         initComponents();
+        
+        persona.add(new empleados("Ingeniero en biomedica", "oficinista", 3, "Jose", "Cruz", "papepi", new Date(1996, 7, 19), "M", "Fransisco Morazan", "0"));
+        persona.add(new Civiles("Tulio", "Sevo", "contra", new Date(2005, 11, 19), "M", "Cortes", "0"));
         
         this.setLocationRelativeTo(null);
     }
@@ -31,6 +38,7 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
         Tf_nombre = new javax.swing.JTextField();
         Tf_contra = new javax.swing.JTextField();
         jb_entrar = new javax.swing.JButton();
+        jb_Salir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,12 +66,26 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
 
         jb_entrar.setBackground(new java.awt.Color(0, 51, 102));
         jb_entrar.setText("ENTRAR");
+        jb_entrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_entrarMouseClicked(evt);
+            }
+        });
         jb_entrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_entrarActionPerformed(evt);
             }
         });
-        jPanel1.add(jb_entrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, 90, 30));
+        jPanel1.add(jb_entrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, 90, 30));
+
+        jb_Salir.setBackground(new java.awt.Color(255, 0, 0));
+        jb_Salir.setText("Salir");
+        jb_Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_SalirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jb_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 390, 90, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -84,9 +106,46 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jb_entrarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void jb_entrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_entrarMouseClicked
+        
+        if(Tf_nombre.getText().equals("")){
+            
+            JOptionPane.showMessageDialog(null, "Ingrese nombre ");
+            
+        }else if(Tf_contra.getText().equals("")){
+            
+            JOptionPane.showMessageDialog(null, "Ingrese contraseña");
+            
+        }else if(Tf_nombre.getText().contains(persona.get(0).getNombre())){
+            if(Tf_nombre.getText().contains(persona.get(0).getApellido())){
+                
+                SesionEmpleados emple = new SesionEmpleados();
+                emple.setVisible(true);
+                emple.setLocationRelativeTo(null);
+                this.setVisible(false);
+                
+            }
+            
+        }else if(Tf_nombre.getText().contains(persona.get(1).getNombre())){
+            if(Tf_nombre.getText().contains(persona.get(1).getApellido())){
+                
+                SesionCiviles civiles = new SesionCiviles();
+                civiles.setVisible(true);
+                civiles.setLocationRelativeTo(null);
+                this.setVisible(false);
+                
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Nombre o Contraseña incorrecta");
+        }
+        
+    }//GEN-LAST:event_jb_entrarMouseClicked
+
+    private void jb_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_SalirActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jb_SalirActionPerformed
+
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -116,6 +175,7 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
             public void run() {
                 new ExamenLab5P2_JafetHou().setVisible(true);
             }
+            
         });
     }
 
@@ -126,6 +186,7 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jb_Salir;
     private javax.swing.JButton jb_entrar;
     // End of variables declaration//GEN-END:variables
 }
