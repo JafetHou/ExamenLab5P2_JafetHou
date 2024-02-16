@@ -16,8 +16,10 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
                 
         initComponents();
         
-        persona.add(new empleados("Ingeniero en biomedica", "oficinista", 3, "Jose", "Cruz", "papepi", new Date(1996, 7, 19), "M", "Fransisco Morazan", "0"));
-        persona.add(new Civiles("Tulio", "Sevo", "contra", new Date(2005, 11, 19), "M", "Cortes", "0"));
+        persona.add(new empleados("Ingeniero en biomedica", "oficinista", 3, "Jose", "Cruz", "papepi", new Date(1996, 7, 19), "M", "Fransisco Morazan"));
+        persona.add(new Civiles("Tulio", "Sevo", "contra", new Date(2005, 11, 19), "M", "Cortes", "01"));
+        
+        JOptionPane.showMessageDialog(null, persona.get(0).getIdentidad()+ " civil: "+ persona.get(1).getIdentidad());
         
         this.setLocationRelativeTo(null);
     }
