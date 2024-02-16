@@ -31,14 +31,244 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        GestionEmple = new javax.swing.JDialog();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jl_bienvenidoEmple = new javax.swing.JLabel();
+        jb_CerrarEmple = new javax.swing.JButton();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        GestionCivil = new javax.swing.JDialog();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jl_bienvenidoCivil = new javax.swing.JLabel();
+        jb_cerrarCivil = new javax.swing.JButton();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        tf_TramiteNombre = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        tf_descripcion = new javax.swing.JTextField();
+        jb_EnviarTramite = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         Tf_nombre = new javax.swing.JTextField();
-        Tf_contra = new javax.swing.JTextField();
         jb_entrar = new javax.swing.JButton();
         jb_Salir = new javax.swing.JButton();
+        Tf_contra = new javax.swing.JTextField();
+
+        GestionEmple.setBackground(new java.awt.Color(255, 255, 255));
+        GestionEmple.setMinimumSize(new java.awt.Dimension(600, 400));
+        GestionEmple.setModal(true);
+
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Bienvenido:");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 120, 50));
+
+        jl_bienvenidoEmple.setBackground(new java.awt.Color(255, 0, 0));
+        jl_bienvenidoEmple.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jl_bienvenidoEmple.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel2.add(jl_bienvenidoEmple, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 150, 50));
+
+        jb_CerrarEmple.setBackground(new java.awt.Color(255, 0, 0));
+        jb_CerrarEmple.setText("Cerrar Sesion");
+        jb_CerrarEmple.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_CerrarEmpleMouseClicked(evt);
+            }
+        });
+        jb_CerrarEmple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_CerrarEmpleActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jb_CerrarEmple, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, 110, 30));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 610, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 335, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Informacion Civiles", jPanel3);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 610, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 335, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Modificar Civiles", jPanel4);
+
+        jPanel2.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 610, 370));
+
+        javax.swing.GroupLayout GestionEmpleLayout = new javax.swing.GroupLayout(GestionEmple.getContentPane());
+        GestionEmple.getContentPane().setLayout(GestionEmpleLayout);
+        GestionEmpleLayout.setHorizontalGroup(
+            GestionEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        GestionEmpleLayout.setVerticalGroup(
+            GestionEmpleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        GestionCivil.setMinimumSize(new java.awt.Dimension(600, 400));
+        GestionCivil.setModal(true);
+
+        jPanel5.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("Bienvenido:");
+        jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 110, 30));
+
+        jl_bienvenidoCivil.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jl_bienvenidoCivil.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel5.add(jl_bienvenidoCivil, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 46, 90, 40));
+
+        jb_cerrarCivil.setBackground(new java.awt.Color(255, 0, 0));
+        jb_cerrarCivil.setText("Cerrar Sesion");
+        jb_cerrarCivil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_cerrarCivilActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jb_cerrarCivil, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 50, 110, 40));
+
+        jPanel8.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Informacion Personal: ");
+
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("Tramites: ");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(481, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel6)
+                .addGap(90, 90, 90)
+                .addComponent(jLabel7)
+                .addContainerGap(145, Short.MAX_VALUE))
+        );
+
+        jTabbedPane3.addTab("Informacion Personal", jPanel8);
+
+        jPanel9.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel9.setBorder(new javax.swing.border.MatteBorder(null));
+
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText("Nombre:");
+
+        tf_TramiteNombre.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel9.setText("Descripcion:");
+
+        tf_descripcion.setBackground(new java.awt.Color(255, 255, 255));
+        tf_descripcion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_descripcionActionPerformed(evt);
+            }
+        });
+
+        jb_EnviarTramite.setBackground(new java.awt.Color(0, 102, 153));
+        jb_EnviarTramite.setText("Enviar");
+        jb_EnviarTramite.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_EnviarTramiteActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tf_TramiteNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(tf_descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jb_EnviarTramite, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(99, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jb_EnviarTramite, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_TramiteNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_descripcion, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)))
+                .addGap(25, 25, 25))
+        );
+
+        jTabbedPane3.addTab("Gestion de Tramites", jPanel9);
+
+        jPanel5.add(jTabbedPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 610, 320));
+
+        javax.swing.GroupLayout GestionCivilLayout = new javax.swing.GroupLayout(GestionCivil.getContentPane());
+        GestionCivil.getContentPane().setLayout(GestionCivilLayout);
+        GestionCivilLayout.setHorizontalGroup(
+            GestionCivilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GestionCivilLayout.createSequentialGroup()
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        GestionCivilLayout.setVerticalGroup(
+            GestionCivilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,21 +278,18 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(0, 51, 102));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel1.setText("Log In");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 272, 70));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 272, 70));
 
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Contraseña: ");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, 120, 30));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 120, 30));
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Nombre Completo: ");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 120, 30));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 120, 30));
 
         Tf_nombre.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(Tf_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 270, 30));
-
-        Tf_contra.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(Tf_contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 270, 30));
+        jPanel1.add(Tf_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 270, 30));
 
         jb_entrar.setBackground(new java.awt.Color(0, 51, 102));
         jb_entrar.setText("ENTRAR");
@@ -76,7 +303,7 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
                 jb_entrarActionPerformed(evt);
             }
         });
-        jPanel1.add(jb_entrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, 90, 30));
+        jPanel1.add(jb_entrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 90, 30));
 
         jb_Salir.setBackground(new java.awt.Color(255, 0, 0));
         jb_Salir.setText("Salir");
@@ -85,17 +312,20 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
                 jb_SalirActionPerformed(evt);
             }
         });
-        jPanel1.add(jb_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 390, 90, 30));
+        jPanel1.add(jb_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 360, 90, 30));
+
+        Tf_contra.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(Tf_contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 270, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -119,20 +349,20 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
         }else if(Tf_nombre.getText().contains(persona.get(0).getNombre())){
             if(Tf_nombre.getText().contains(persona.get(0).getApellido())){
                 
-                SesionEmpleados emple = new SesionEmpleados();
-                emple.setVisible(true);
-                emple.setLocationRelativeTo(null);
+                jl_bienvenidoEmple.setText(persona.get(0).getNombre()+" "+persona.get(0).getApellido());
                 this.setVisible(false);
+                GestionEmple.setVisible(true);
+                
                 
             }
             
         }else if(Tf_nombre.getText().contains(persona.get(1).getNombre())){
             if(Tf_nombre.getText().contains(persona.get(1).getApellido())){
                 
-                SesionCiviles civiles = new SesionCiviles();
-                civiles.setVisible(true);
-                civiles.setLocationRelativeTo(null);
+                jl_bienvenidoCivil.setText(persona.get(1).getNombre()+" "+persona.get(1).getApellido());
                 this.setVisible(false);
+                GestionCivil.setVisible(true);
+                GestionCivil.setLocationRelativeTo(null);
                 
             }
         }else{
@@ -144,6 +374,36 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
     private void jb_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_SalirActionPerformed
         this.dispose();
     }//GEN-LAST:event_jb_SalirActionPerformed
+
+    private void jb_CerrarEmpleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_CerrarEmpleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_CerrarEmpleActionPerformed
+
+    private void jb_CerrarEmpleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_CerrarEmpleMouseClicked
+        GestionEmple.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_jb_CerrarEmpleMouseClicked
+
+    private void jb_cerrarCivilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_cerrarCivilActionPerformed
+        GestionCivil.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_jb_cerrarCivilActionPerformed
+
+    private void tf_descripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_descripcionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_descripcionActionPerformed
+
+    private void jb_EnviarTramiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_EnviarTramiteActionPerformed
+        if(tf_TramiteNombre.getText().equals("")){
+            
+            JOptionPane.showMessageDialog(null, "Debe agregar nombre del tramite");
+            
+        }else if(tf_descripcion.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Debe Agregar descripcion");
+        }else{
+            
+        }
+    }//GEN-LAST:event_jb_EnviarTramiteActionPerformed
 
     
     public static void main(String args[]) {
@@ -180,13 +440,36 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDialog GestionCivil;
+    private javax.swing.JDialog GestionEmple;
     private javax.swing.JTextField Tf_contra;
     private javax.swing.JTextField Tf_nombre;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane3;
+    private javax.swing.JButton jb_CerrarEmple;
+    private javax.swing.JButton jb_EnviarTramite;
     private javax.swing.JButton jb_Salir;
+    private javax.swing.JButton jb_cerrarCivil;
     private javax.swing.JButton jb_entrar;
+    private javax.swing.JLabel jl_bienvenidoCivil;
+    private javax.swing.JLabel jl_bienvenidoEmple;
+    private javax.swing.JTextField tf_TramiteNombre;
+    private javax.swing.JTextField tf_descripcion;
     // End of variables declaration//GEN-END:variables
 }
