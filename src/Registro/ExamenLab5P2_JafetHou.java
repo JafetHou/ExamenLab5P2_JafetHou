@@ -1,4 +1,3 @@
-
 package Registro;
 
 import java.text.SimpleDateFormat;
@@ -7,25 +6,27 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
 
 public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
 
     // FILA 2, ASIENTO 14
     public static ArrayList<Personas> persona = new ArrayList<>();
-    
+    public static ArrayList<tramites> trami = new ArrayList<>();
+
     public ExamenLab5P2_JafetHou() {
-                
+
         initComponents();
-        
+
         persona.add(new empleados("Ingeniero en biomedica", "oficinista", 3, "Jose", "Cruz", "papepi", new Date(1996, 7, 19), "M", "Fransisco Morazan", ""));
         persona.add(new Civiles("Tulio", "Sevo", "contra", new Date(2005, 11, 19), "M", "Cortes", ""));
-        
+
         DefaultComboBoxModel idcb = (DefaultComboBoxModel) cb_identidad.getModel();
         idcb.addElement(persona.get(1).getIdentidad());
-        
-        
-        
+
+        cb_identidad.setModel(idcb);
+
         this.setLocationRelativeTo(null);
     }
 
@@ -200,6 +201,12 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
         jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel4.setForeground(new java.awt.Color(0, 0, 0));
 
+        cb_identidad.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_identidadItemStateChanged(evt);
+            }
+        });
+
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Nombre");
 
@@ -235,6 +242,11 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
 
         jb_ModificarCivil.setBackground(new java.awt.Color(0, 102, 153));
         jb_ModificarCivil.setText("modificar");
+        jb_ModificarCivil.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_ModificarCivilMouseClicked(evt);
+            }
+        });
         jb_ModificarCivil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_ModificarCivilActionPerformed(evt);
@@ -407,7 +419,7 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
                         .addGap(6, 6, 6)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(137, Short.MAX_VALUE))
         );
@@ -448,6 +460,11 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
 
         jb_EnviarTramite.setBackground(new java.awt.Color(0, 102, 153));
         jb_EnviarTramite.setText("Enviar");
+        jb_EnviarTramite.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_EnviarTramiteMouseClicked(evt);
+            }
+        });
         jb_EnviarTramite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_EnviarTramiteActionPerformed(evt);
@@ -568,43 +585,42 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jb_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_entrarActionPerformed
-        
-        
+
+
     }//GEN-LAST:event_jb_entrarActionPerformed
 
     private void jb_entrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_entrarMouseClicked
-        
-        if(Tf_nombre.getText().equals("")){
-            
+
+        if (Tf_nombre.getText().equals("")) {
+
             JOptionPane.showMessageDialog(null, "Ingrese nombre ");
-            
-        }else if(Tf_contra.getText().equals("")){
-            
+
+        } else if (Tf_contra.getText().equals("")) {
+
             JOptionPane.showMessageDialog(null, "Ingrese contraseña");
-            
-        }else if(Tf_nombre.getText().contains(persona.get(0).getNombre())){
-            if(Tf_nombre.getText().contains(persona.get(0).getApellido())){
-                
-                jl_bienvenidoEmple.setText(persona.get(0).getNombre()+" "+persona.get(0).getApellido());
+
+        } else if (Tf_nombre.getText().contains(persona.get(0).getNombre())) {
+            if (Tf_nombre.getText().contains(persona.get(0).getApellido())) {
+
+                jl_bienvenidoEmple.setText(persona.get(0).getNombre() + " " + persona.get(0).getApellido());
                 this.setVisible(false);
                 GestionEmple.setVisible(true);
-                
-                
+
             }
-            
-        }else if(Tf_nombre.getText().contains(persona.get(1).getNombre())){
-            if(Tf_nombre.getText().contains(persona.get(1).getApellido())){
-                
-                jl_bienvenidoCivil.setText(persona.get(1).getNombre()+" "+persona.get(1).getApellido());
+
+        } else if (Tf_nombre.getText().contains(persona.get(1).getNombre())) {
+            if (Tf_nombre.getText().contains(persona.get(1).getApellido())) {
+
+                jl_bienvenidoCivil.setText(persona.get(1).getNombre() + " " + persona.get(1).getApellido());
                 this.setVisible(false);
                 GestionCivil.setVisible(true);
                 GestionCivil.setLocationRelativeTo(null);
-                
+
             }
-        }else{
+        } else {
             JOptionPane.showMessageDialog(null, "Nombre o Contraseña incorrecta");
         }
-        
+
     }//GEN-LAST:event_jb_entrarMouseClicked
 
     private void jb_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_SalirActionPerformed
@@ -630,21 +646,7 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
     }//GEN-LAST:event_tf_descripcionActionPerformed
 
     private void jb_EnviarTramiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_EnviarTramiteActionPerformed
-        if(tf_TramiteNombre.getText().equals("")){
-            
-            JOptionPane.showMessageDialog(null, "Debe agregar nombre del tramite");
-            
-        }else if(tf_descripcion.getText().equals("")){
-            JOptionPane.showMessageDialog(null, "Debe Agregar descripcion");
-        }else{
-            
-            Date hoy = new Date();
-            SimpleDateFormat formato = new SimpleDateFormat("dd/MM/YYYY");
-            String fechaFormateada = formato.format(hoy);
-            
-            //persona.add((tramites) new tramites(tf_TramiteNombre.getText(), tf_descripcion.getText(),hoy , persona.get(1).getIdentidad()));
-            
-        }
+
     }//GEN-LAST:event_jb_EnviarTramiteActionPerformed
 
     private void jb_ModificarCivilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_ModificarCivilActionPerformed
@@ -660,9 +662,23 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
         String info[] = {"Nombre Completo", "No. Identidad", "Fecha"};
         mt.setColumnIdentifiers(info);
         jt_infoPer.setModel(mt);
-        
-        mt.addRow(new Object[]{persona.get(1).getNombre()+" "+persona.get(1).getApellido(), persona.get(1).getIdentidad(), persona.get(1).getFecha() });
-        
+
+        mt.addRow(new Object[]{persona.get(1).getNombre() + " " + persona.get(1).getApellido(), persona.get(1).getIdentidad(), persona.get(1).getFecha()});
+
+        DefaultTableModel tr = new DefaultTableModel();
+        String tablatr[] = {"Nombre de Tramite", "Descripcion", "Fecha", "No. Identidad"};
+        mt.setColumnIdentifiers(tablatr);
+        jTable4.setModel(tr);
+
+        for (int i = 0; i < trami.size(); i++) {
+
+            Object[] Tra = {trami.get(i).getNameTrami(), trami.get(i).getDescripcion(), trami.get(i).getFechaSoli(), trami.get(i).getIdentidad()};
+
+        }
+        Vector<?> Tra = null;
+
+        tr.addRow(Tra);
+
     }//GEN-LAST:event_jTabbedPane3MouseClicked
 
     private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
@@ -670,22 +686,69 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
         String info[] = {"Nombre Completo", "No. Identidad", "Fecha de nacimiento"};
         mt.setColumnIdentifiers(info);
         jTable1.setModel(mt);
-        
-        mt.addRow(new Object[]{persona.get(1).getNombre()+" "+persona.get(1).getApellido(), persona.get(1).getIdentidad(), persona.get(1).getFecha() });
-        
+
+        mt.addRow(new Object[]{persona.get(1).getNombre() + " " + persona.get(1).getApellido(), persona.get(1).getIdentidad(), persona.get(1).getFecha()});
+
         DefaultTableModel tr = new DefaultTableModel();
-        String trami[] = {"Nombre Tramite", "Descripcion", "Fecha", "No. Identidad"};
-        tr.setColumnIdentifiers(trami);
+        String tramites[] = {"Nombre Tramite", "Descripcion", "Fecha", "No. Identidad"};
+        tr.setColumnIdentifiers(tramites);
         jTable2.setModel(tr);
-        
-        Civiles personaNV = new Civiles();
-        //personaNV = persona.get(1);
-        
-        
-        //tr.addRow((Civiles)persona.get(1).);
+
+        for (int i = 0; i < trami.size(); i++) {
+
+            Object[] Tra = {trami.get(i).getNameTrami(), trami.get(i).getDescripcion(), trami.get(i).getFechaSoli(), trami.get(i).getIdentidad()};
+
+        }
+        Vector<?> Tra = null;
+
+        tr.addRow(Tra);
     }//GEN-LAST:event_jTabbedPane1MouseClicked
 
-    
+    private void jb_EnviarTramiteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_EnviarTramiteMouseClicked
+        if (tf_TramiteNombre.getText().equals("")) {
+
+            JOptionPane.showMessageDialog(null, "Debe ingresar el nombre del tramite");
+
+        } else if (tf_descripcion.getText().equals("")) {
+
+            JOptionPane.showMessageDialog(null, "Debe agregar descripcion al tramite");
+
+        } else {
+
+            Date hoy = new Date();
+            SimpleDateFormat formato = new SimpleDateFormat("dd/MM/YYYY");
+            String fechaFormateada = formato.format(hoy);
+
+            trami.add((tramites) new tramites(tf_TramiteNombre.getText(), tf_descripcion.getText(), hoy, persona.get(1).getIdentidad()));
+
+        }
+
+    }//GEN-LAST:event_jb_EnviarTramiteMouseClicked
+
+    private void jb_ModificarCivilMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_ModificarCivilMouseClicked
+        int i = cb_identidad.getSelectedIndex();
+        
+        persona.get(i).setNombre(Tf_nombre.getText());
+        persona.get(i).setApellido(tf_ModiAppellido.getText());
+        persona.get(i).setContra(Tf_contra.getText());
+        persona.get(i).setFecha(jc_fecha.getDate());
+        persona.get(i).setSexo(cb_modisexo.getSelectedItem().toString());
+        persona.get(i).setDepa(cb_modidepartamento.getSelectedItem().toString());
+        
+    }//GEN-LAST:event_jb_ModificarCivilMouseClicked
+
+    private void cb_identidadItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_identidadItemStateChanged
+
+        int i = cb_identidad.getSelectedIndex();
+
+        tf_ModiNombre.setText(persona.get(i).getNombre());
+        tf_ModiAppellido.setText(persona.get(i).getApellido());
+        tf_ModiContra.setText(persona.get(i).getContra());
+        jc_fecha.setDate(persona.get(i).getFecha());
+
+
+    }//GEN-LAST:event_cb_identidadItemStateChanged
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -715,7 +778,7 @@ public class ExamenLab5P2_JafetHou extends javax.swing.JFrame {
             public void run() {
                 new ExamenLab5P2_JafetHou().setVisible(true);
             }
-            
+
         });
     }
 
