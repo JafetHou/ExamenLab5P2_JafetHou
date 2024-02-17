@@ -36,7 +36,7 @@ public class Personas {
         this.fecha = fecha;
         this.sexo = sexo;
         this.depa = depa;
-        this.identidad = identidad;
+        this.identidad = identidad();
     }
 
     public String getNombre() {
@@ -94,6 +94,8 @@ public class Personas {
     public void setIdentidad(String identidad) {
         this.identidad = identidad();
     }
+    
+    
 
     @Override
     public String toString() {
@@ -103,8 +105,7 @@ public class Personas {
     public String identidad(){
         
         String id = "";
-        
-        if(depa.equalsIgnoreCase("Francisco Morazan")){
+        if(depa.equalsIgnoreCase("Fransisco Morazan")){
             
             int fran = 1+ran.nextInt(28);
             int random = 1000+ran.nextInt(9999);
@@ -115,14 +116,14 @@ public class Personas {
             
             int cort = 1+ran.nextInt(12);
             int random = 1000+ran.nextInt(9999);
-            id = "01"+cort+"-"+fecha.getYear()+"-"+random;
+            id = "02"+cort+"-"+fecha.getYear()+"-"+random;
             return id;
             
         }else if(depa.equalsIgnoreCase("Comayagua")){
             
             int coma = 1+ran.nextInt(21);
             int random = 1000+ran.nextInt(9999);
-            id = "01"+coma+"-"+fecha.getYear()+"-"+random;
+            id = "03"+coma+"-"+fecha.getYear()+"-"+random;
             return id;
         }
         return id;

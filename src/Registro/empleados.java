@@ -25,6 +25,13 @@ public class empleados extends Personas{
         this.puesto = puesto;
         this.anios = anios;
     }
+
+    public empleados(String carrera, String puesto, int anios, String nombre, String apellido, String contra, Date fecha, String sexo, String depa, String identidad) {
+        super(nombre, apellido, contra, fecha, sexo, depa, identidad);
+        this.carrera = carrera;
+        this.puesto = puesto;
+        this.anios = anios;
+    }
     
 
     public String getCarrera() {

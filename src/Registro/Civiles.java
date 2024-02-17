@@ -11,6 +11,10 @@ public class Civiles extends Personas{
     public Civiles() {
     }
 
+    public Civiles(String nombre, String apellido, String contra, Date fecha, String sexo, String depa, String identidad) {
+        super(nombre, apellido, contra, fecha, sexo, depa, identidad);
+    }
+
     
     
     public Civiles(String nombre, String apellido, String contra, Date fecha, String sexo, String depa) {
